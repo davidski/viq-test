@@ -1,0 +1,11 @@
+Package: vulnpryr
+Type: Package
+Title: Vulnerability Reprioritization Framework
+Version: 0.1
+Date: 2015-03-22
+Author: David F. Severski
+Maintainer: David F. Severski <davidski@deadheaven.com>
+Description: A minimal implementation of the core VulnPryer formula.
+License: MIT + file LICENSE
+Imports:
+  dplyr
