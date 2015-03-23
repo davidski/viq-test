@@ -4,7 +4,7 @@
 \name{vulnpryr}
 \alias{vulnpryr}
 \alias{vulnpryr-package}
-\title{vulnpryr: A package for computating the notorious bar statistic.}
+\title{vulnpryr: A package for prying additional utility into your CVSS scores.}
 \usage{
 vulnpryr(cve_id, cvss_base, vulndb, avg_cvss_score = 6.2, msp_factor = 2.5,
   edb_factor = 1.5, private_exploit_factor = 0.5,
@@ -33,13 +33,12 @@ vulnpryr(cve_id, cvss_base, vulndb, avg_cvss_score = 6.2, msp_factor = 2.5,
 Dataframe with the adjusted vuln
 }
 \description{
-The foo package provides three categories of important functions:
-foo, bar and baz.
+vulnpryr: A package for prying additional utility into your CVSS scores.
 
 Add together two numbers.
 }
 \section{vulnpryr functions}{
 
-The foo functions ...
+The vulnpryer functions ...
 }
 
