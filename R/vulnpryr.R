@@ -5,13 +5,12 @@
 #'
 #' @docType package
 #' @name vulnpryr
-NULL
+my_env <- new.env(parent = emptyenv())
 
-#' Add together two numbers.
+#' Rescale vulnerabilities.
 #' 
 #' @param cve_id ID of the CVE in question
 #' @param cvss_base The current CVSS rating of the vuln in question
-#' @param vulndb Dataframe of the vulndb extract
 #' @param avg_cvss_score Mean CVSS score of the population
 #' @param msp_factor Amount to adjust CVSS if Metasploit module is present
 #' @param edb_factor Amount to adjust CVSS if ExploitDB is present
@@ -19,11 +18,13 @@ NULL
 #' @param network_vector_factor Amount to adjust if not a network vuln
 #' @param impact_factor Amount to adjust if impact is not confidentiality
 #' @return Dataframe with the adjusted vuln
-vulnpryr <- function(cve_id, cvss_base, vulndb, avg_cvss_score = 6.2, 
+vulnpryr <- function(cve_id, cvss_base, avg_cvss_score = 6.2, 
                      msp_factor = 2.5, edb_factor = 1.5,
                      private_exploit_factor = .5, network_vector_factor = 2, 
                      impact_factor = 3) {
 
+  vulndb <- get_vulndb()
+  
   #cat(paste0("cve_id is ", cve_id))
   if (!any(vulndb$CVE_ID == cve_id)){
     #warning(paste0("Could not find ", cve_id))
@@ -68,4 +69,19 @@ vulnpryr <- function(cve_id, cvss_base, vulndb, avg_cvss_score = 6.2,
   }
 
   return(data.frame(modified = TRUE, cvss = modified_score))
+}
+
+#' Load VulnDB extract
+#' @param vulndb_file Path to VulnDB extract
+load_vulndb <- function(vulndb_file) {
+  
+  if (file.exists(vulndb_file)) {
+    my_env$vulndb <- read.csv(vulndb_file, stringsAsFactors = FALSE)
+  }
+  
+}
+
+#' Get vulndb
+get_vulndb <- function() {
+  my_env$vulndb
 }

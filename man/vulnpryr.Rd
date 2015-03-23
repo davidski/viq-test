@@ -2,11 +2,16 @@
 % Please edit documentation in R/vulnpryr.R
 \docType{package}
 \name{vulnpryr}
+\alias{my_env}
 \alias{vulnpryr}
 \alias{vulnpryr-package}
 \title{vulnpryr: A package for prying additional utility into your CVSS scores.}
+\format{\preformatted{<environment: 0x0000000008e4ab70> 
+}}
 \usage{
-vulnpryr(cve_id, cvss_base, vulndb, avg_cvss_score = 6.2, msp_factor = 2.5,
+my_env
+
+vulnpryr(cve_id, cvss_base, avg_cvss_score = 6.2, msp_factor = 2.5,
   edb_factor = 1.5, private_exploit_factor = 0.5,
   network_vector_factor = 2, impact_factor = 3)
 }
@@ -14,8 +19,6 @@ vulnpryr(cve_id, cvss_base, vulndb, avg_cvss_score = 6.2, msp_factor = 2.5,
 \item{cve_id}{ID of the CVE in question}
 
 \item{cvss_base}{The current CVSS rating of the vuln in question}
-
-\item{vulndb}{Dataframe of the vulndb extract}
 
 \item{avg_cvss_score}{Mean CVSS score of the population}
 
@@ -35,10 +38,11 @@ Dataframe with the adjusted vuln
 \description{
 vulnpryr: A package for prying additional utility into your CVSS scores.
 
-Add together two numbers.
+Rescale vulnerabilities.
 }
 \section{vulnpryr functions}{
 
 The vulnpryer functions ...
 }
+\keyword{datasets}
 
