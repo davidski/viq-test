@@ -31,8 +31,7 @@ vulnpryr <- function(cve_id, cvss_base, avg_cvss_score = 6.2,
     return(data.frame(modified = FALSE, cvss = cvss_base))
   }
 
-  modified_score <- cvss_base
-  modified_score <- (modified_score - avg_cvss_score) / avg_cvss_score * 10
+  modified_score <- cvss_base + (cvss_base - avg_cvss_score) / avg_cvss_score
   if (sum(vulndb[vulndb$CVE_ID == cve_id, "msp"]) >= 1) {
     modified_score <- modified_score + msp_factor
   }
