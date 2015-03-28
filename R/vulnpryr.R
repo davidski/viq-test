@@ -7,6 +7,31 @@
 #' @name vulnpryr
 my_env <- new.env(parent = emptyenv())
 
+#' Sample vulnerability attributes data
+#'
+#' A dataset of _dummy_ vulnerabilities attributes to demonstrate the 
+#' functionality and use of vulnpryr. The variables are as follows:
+#'
+#' \itemize{
+#' \item cve_id. CVE ID of the vulnerability
+#' \item cvss_score. base CVSS  score (0 - 10)
+#' \item msp. number of entries for the vulnerability in Metasploit (0+)
+#' \item edb. number of entries for the vulnerability in Exploit DB (0+)
+#' \item public_exploit. number of times the vulnerability has a known public vulnerability
+#' \item private_exploit. number of times the vulnerability has a known private vulnerability
+#' \item network_vector. number of times the vulnerability has a known network attack vector
+#' \item impact_integrity. number of times the vulnerability has a known impact on integrity
+#' \item impact_confidentiality. number of times the vulnerability has a known impact on confidentiality
+#' }
+#'
+#' @docType data
+#' @keywords vulndb
+#' @name vulndb
+#' @usage data(vulndb)
+#' @format A data frame with 10 rows and 9 variables
+NULL
+
+
 #' Rescale vulnerabilities.
 #' 
 #' @param cve_id ID of the CVE in question
@@ -18,6 +43,10 @@ my_env <- new.env(parent = emptyenv())
 #' @param network_vector_factor Amount to adjust if not a network vuln
 #' @param impact_factor Amount to adjust if impact is not confidentiality
 #' @return Dataframe with the adjusted vuln
+#' @examples
+#' data(vulndb)
+#' set_vulndb(vulndb)
+#' vulnpryr("CVE-2013-2899", 5)
 vulnpryr <- function(cve_id, cvss_base, avg_cvss_score = 6.2, 
                      msp_factor = 2.5, edb_factor = 1.5,
                      private_exploit_factor = .5, network_vector_factor = 2, 

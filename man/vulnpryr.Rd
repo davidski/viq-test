@@ -6,7 +6,7 @@
 \alias{vulnpryr}
 \alias{vulnpryr-package}
 \title{vulnpryr: A package for prying additional utility into your CVSS scores.}
-\format{\preformatted{<environment: 0x0000000008ecfdc0> 
+\format{\preformatted{<environment: 0x0000000008e8da60> 
 }}
 \usage{
 my_env
@@ -43,6 +43,11 @@ Rescale vulnerabilities.
 \section{vulnpryr functions}{
 
 The vulnpryer functions ...
+}
+\examples{
+data(vulndb)
+set_vulndb(vulndb)
+vulnpryr("CVE-2013-2899", 5)
 }
 \keyword{datasets}
 
