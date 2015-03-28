@@ -3,6 +3,9 @@ language: r
 #be strict when checking our package
 warnings_are_errors: true
 
+#R support is incompatible with Travis container infrastructure
+sudo: required
+
 notifications:
   email:
     on_success: change
