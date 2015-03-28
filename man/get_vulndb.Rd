@@ -6,6 +6,9 @@
 \usage{
 get_vulndb()
 }
+\value{
+The currently used vulnerability attributes DB
+}
 \description{
 Get vulndb
 }

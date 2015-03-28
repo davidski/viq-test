@@ -2,14 +2,14 @@
 % Please edit documentation in R/vulnpryr.R
 \name{load_vulndb}
 \alias{load_vulndb}
-\title{Load VulnDB extract}
+\title{Load the vulnerability attributes extract}
 \usage{
 load_vulndb(vulndb_file)
 }
 \arguments{
-\item{vulndb_file}{Path to VulnDB extract}
+\item{vulndb_file}{Path to vulnerability attributes extract}
 }
 \description{
-Load VulnDB extract
+Load the vulnerability attributes extract
 }
 

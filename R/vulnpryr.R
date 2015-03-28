@@ -70,17 +70,25 @@ vulnpryr <- function(cve_id, cvss_base, avg_cvss_score = 6.2,
   return(data.frame(modified = TRUE, cvss = modified_score))
 }
 
-#' Load VulnDB extract
-#' @param vulndb_file Path to VulnDB extract
+#' Load the vulnerability attributes extract
+#' @param vulndb_file Path to vulnerability attributes extract
 load_vulndb <- function(vulndb_file) {
   
   if (file.exists(vulndb_file)) {
-    my_env$vulndb <- read.csv(vulndb_file, stringsAsFactors = FALSE)
+    set_vulndb(read.csv(vulndb_file, stringsAsFactors = FALSE))
   }
   
 }
 
 #' Get vulndb
+#' @return The currently used vulnerability attributes DB
 get_vulndb <- function() {
   my_env$vulndb
+}
+
+#' Set the vulnerability attributes database for use by vulnpryr
+#' 
+#' @param vulndb Dataframe of vulnerability attributes
+set_vulndb <- function(vulndb) {
+  my_env$vulndb <- vulndb
 }
