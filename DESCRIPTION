@@ -7,4 +7,5 @@ Author: David F. Severski
 Maintainer: David F. Severski <davidski@deadheaven.com>
 Description: A minimal implementation of the core VulnPryer formula.
 License: MIT + file LICENSE
-Imports:
+Imports: 
+Suggests: testthat
