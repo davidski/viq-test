@@ -1,4 +1,4 @@
-[![Travis-CI Build Status](https://travis-ci.org/SCH-CISM/vulnpryr.png?branch=master)](https://travis-ci.org/SCH-CISM/vulnpryr)
+[![Travis-CI Build Status](https://travis-ci.org/SCH-CISM/vulnpryr.png?branch=master)](https://travis-ci.org/SCH-CISM/vulnpryr)[![Coverage Status](https://coveralls.io/repos/SCH-CISM/vulnpryr/badge.svg?branch=master)](https://coveralls.io/r/SCH-CISM/vulnpryr?branch=master)
 
 vulnpryr
 =========
