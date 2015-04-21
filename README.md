@@ -3,11 +3,30 @@
 vulnpryr
 =========
 
-Vulnerability Pryer - An implementation of [VulnPryer](https://github.com/SCH-CISM/VulnPryer) for R.
+Vulnerability Pryer - An implementation of [VulnPryer](https://github.com/SCH-CISM/VulnPryer) in R.
 
 #Installation
 `
 devtools:github("SCH-CISM\vulnpryr")
+`
+
+#Usage
+
+```
+library(vulnpryr)
+
+#Load vulnerability fact table
+vulndb_file <- ".\vulnerability_facts.csv"
+vulnpryr::load_vulndb(vulndb_file)
+
+#Rescore a vulnerability
+vulnpryer(cve_id = "CVE-2014-0013", cvss_base = 5)
+```
+
+Weightings can be overridden by specifying manual values in the function call.
+
+`
+vulnpryer(cve_id = "CVE-2014-0013", cvss_base = 5, msp_factor = 2, network_vector_factor = 3)
 `
 
 #Acknowledgements
