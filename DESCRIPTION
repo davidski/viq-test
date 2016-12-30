@@ -1,4 +1,4 @@
-Package: vulnpryr
+Package: viqtest
 Type: Package
 Title: Vulnerability Reprioritization Framework
 Version: 0.1
@@ -7,4 +7,6 @@ Author: David F. Severski
 Maintainer: David F. Severski <davidski@deadheaven.com>
 Description: A minimal implementation of the core VulnPryer formula.
 License: MIT + file LICENSE
-Suggests: testthat
+Suggests:
+    testthat
+RoxygenNote: 5.0.1
