@@ -1,7 +1,10 @@
-[![Travis-CI Build Status](https://travis-ci.org/davidski/viq-test.png?branch=master)](https://travis-ci.org/davidski/viq-test)[![Coverage Status](https://coveralls.io/repos/davidski/viq-test/badge.svg?branch=master)](https://coveralls.io/r/davidski/viq-test?branch=master)
-
 viq-test
 =========
+<!-- badges: start -->
+[![R build status](https://github.com/davidski/viq-test/workflows/R-CMD-check/badge.svg)](https://github.com/davidski/viq-test/actions)
+[![Coverage Status](https://coveralls.io/repos/davidski/viq-test/badge.svg?branch=master)](https://coveralls.io/r/davidski/viq-test?branch=master)
+<!-- badges: end -->
+
 
 VIQ-Test is an R based toolset for performing analysis on vulnerability prioritization schemes.
 
